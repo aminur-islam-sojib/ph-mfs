@@ -40,9 +40,80 @@ const Cards = ({ active = 'add', onSelect = () => {} }) => {
         >
           <div className="flex flex-col justify-center items-center leading-1.5 gap-2">
             <div>
-              <img src={money} alt="send money" />
+              <img src={send} alt="send money" />
             </div>
             <h1 className=" text-sm text-nowrap font-medium">Send Money</h1>
+          </div>
+        </div>
+
+        <div
+          role="button"
+          onClick={() => onSelect('transfer')}
+          //   onKeyDown={(e) => (e.key === 'Enter' ? onSelect('send') : null)}
+          className={`cursor-pointer ${
+            active === 'transfer'
+              ? 'border border-blue-500 rounded-lg p-3 flex flex-col justify-center items-center leading-1.5 gap-2'
+              : 'border border-gray-200 rounded-lg p-3 flex flex-col justify-center items-center leading-1.5 gap-2'
+          }`}
+        >
+          <div className="flex flex-col justify-center items-center leading-1.5 gap-2">
+            <div>
+              <img src={money} alt="Transfer money" />
+            </div>
+            <h1 className=" text-sm text-nowrap font-medium">Transfer Money</h1>
+          </div>
+        </div>
+
+        <div
+          role="button"
+          onClick={() => onSelect('payBIll')}
+          //   onKeyDown={(e) => (e.key === 'Enter' ? onSelect('send') : null)}
+          className={`cursor-pointer ${
+            active === 'payBIll'
+              ? 'border border-blue-500 rounded-lg p-3 flex flex-col justify-center items-center leading-1.5 gap-2'
+              : 'border border-gray-200 rounded-lg p-3 flex flex-col justify-center items-center leading-1.5 gap-2'
+          }`}
+        >
+          <div className="flex flex-col justify-center items-center leading-1.5 gap-2">
+            <div>
+              <img src={purse} alt="Transfer money" />
+            </div>
+            <h1 className=" text-sm text-nowrap font-medium">Pay Bill</h1>
+          </div>
+        </div>
+
+        <div
+          role="button"
+          onClick={() => onSelect('bonus')}
+          //   onKeyDown={(e) => (e.key === 'Enter' ? onSelect('send') : null)}
+          className={`cursor-pointer ${
+            active === 'bonus'
+              ? 'border border-blue-500 rounded-lg p-3 flex flex-col justify-center items-center leading-1.5 gap-2'
+              : 'border border-gray-200 rounded-lg p-3 flex flex-col justify-center items-center leading-1.5 gap-2'
+          }`}
+        >
+          <div className="flex flex-col justify-center items-center leading-1.5 gap-2">
+            <div>
+              <img src={bonus} alt="Transfer money" />
+            </div>
+            <h1 className=" text-sm text-nowrap font-medium">Get Bonus</h1>
+          </div>
+        </div>
+        <div
+          role="button"
+          onClick={() => onSelect('transaction')}
+          //   onKeyDown={(e) => (e.key === 'Enter' ? onSelect('send') : null)}
+          className={`cursor-pointer ${
+            active === 'trsansaction'
+              ? 'border border-blue-500 rounded-lg p-3 flex flex-col justify-center items-center leading-1.5 gap-2'
+              : 'border border-gray-200 rounded-lg p-3 flex flex-col justify-center items-center leading-1.5 gap-2'
+          }`}
+        >
+          <div className="flex flex-col justify-center items-center leading-1.5 gap-2">
+            <div>
+              <img src={transaction} alt="Transactions" />
+            </div>
+            <h1 className=" text-sm text-nowrap font-medium">Transactons</h1>
           </div>
         </div>
       </div>
