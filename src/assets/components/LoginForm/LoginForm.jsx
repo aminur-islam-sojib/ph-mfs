@@ -1,5 +1,5 @@
-import bg from '../../../assets/bg.png';
-import group from '../../../assets/Group.png';
+import bg from '../../../assets/image/bg.png';
+import group from '../../../assets/image/Group.png';
 import { useNavigate } from 'react-router-dom';
 import '../../../index.css';
 import { useState } from 'react';
