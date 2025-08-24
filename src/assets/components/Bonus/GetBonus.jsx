@@ -1,4 +1,4 @@
-const GetBonus = () => {
+const Bonus = () => {
   return (
     <>
       <h1>Get Bonus</h1>
@@ -6,4 +6,4 @@ const GetBonus = () => {
   );
 };
 
-export default GetBonus;
+export default Bonus;

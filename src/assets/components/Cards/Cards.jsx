@@ -121,9 +121,4 @@ const Cards = ({ active = 'add', onSelect = () => {} }) => {
   );
 };
 
-Cards.propTypes = {
-  active: PropTypes.string,
-  onSelect: PropTypes.func,
-};
-
 export default Cards;
