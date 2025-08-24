@@ -104,14 +104,14 @@ const Cards = ({ active = 'add', onSelect = () => {} }) => {
           onClick={() => onSelect('transaction')}
           //   onKeyDown={(e) => (e.key === 'Enter' ? onSelect('send') : null)}
           className={`cursor-pointer ${
-            active === 'trsansaction'
+            active === 'transaction'
               ? 'border border-blue-500 rounded-lg p-3 flex flex-col justify-center items-center leading-1.5 gap-2'
               : 'border border-gray-200 rounded-lg p-3 flex flex-col justify-center items-center leading-1.5 gap-2'
           }`}
         >
           <div className="flex flex-col justify-center items-center leading-1.5 gap-2">
             <div>
-              <img src={transaction} alt="Transactions" />
+              <img src={transaction} alt="" />
             </div>
             <h1 className=" text-sm text-nowrap font-medium">Transactons</h1>
           </div>
