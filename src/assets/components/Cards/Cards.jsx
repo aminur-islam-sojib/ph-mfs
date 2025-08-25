@@ -9,7 +9,7 @@ import wallet from '../../image/wallet1.png';
 const Cards = ({ active = 'add', onSelect = () => {} }) => {
   return (
     <>
-      <div className=" grid grid-cols-3 gap-3 mx-3 mt-5">
+      <div className=" grid grid-cols-3 gap-3 mx-3 mt-5 mb-4">
         <div
           role="button"
           onClick={() => onSelect('add')}
