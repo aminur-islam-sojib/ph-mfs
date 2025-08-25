@@ -1,4 +1,8 @@
+import { useBalance } from '../../../ContexApi/BalanceProvider';
+
 const AddMoney = () => {
+  const { setAvailableBalance } = useBalance();
+
   return (
     <>
       <div className="p-4 bg-[#F4F5F7]">
@@ -43,7 +47,10 @@ const AddMoney = () => {
               className="input  mt-2 w-full border border-gray-300 rounded-3xl bg-[#F4F5F7] focus-visible:outline-0"
             />
           </div>
-          <button className="btn btn-primary mt-4 w-full rounded-3xl focus-visible:outline-0">
+          <button
+            onClick={() => setAvailableBalance((prev) => prev + 1000)}
+            className="btn btn-primary mt-4 w-full rounded-3xl focus-visible:outline-0"
+          >
             Add Money
           </button>
         </div>

@@ -3,10 +3,12 @@ import groups from '../../image/Group.png';
 import '../../../index.css';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import { useBalance } from '../../../ContexApi/BalanceProvider';
 
 const Navbar = () => {
   const navigate = useNavigate();
   const [showPopup, setShowPopup] = useState(false);
+  const { availableBalance } = useBalance();
 
   const confirmLogout = () => {
     setShowPopup(false);
@@ -30,7 +32,7 @@ const Navbar = () => {
           </div>
           <div className=" flex flex-col px-2 rounded-lg leading-5 justify-center">
             <h1 className=" font-bold">
-              $ <span>450</span>
+              $ <span>{availableBalance}</span>
             </h1>
             <p className=" text-gray-500 text-sm">Available Balance</p>
           </div>
