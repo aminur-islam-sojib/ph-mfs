@@ -49,10 +49,10 @@ const Navbar = () => {
         </p>
       </div>
       {showPopup && (
-        <div className="fixed inset-0 flex items-center justify-center bg-[#316ff6] bg-opacity-40">
-          <div className="bg-white p-6 rounded-lg shadow-lg text-center">
+        <div className="fixed inset-0 flex items-center justify-center backdrop-blur-sm bg-opacity-40 z-40">
+          <div className="bg-white p-6 rounded-lg shadow-lg text-center z-50">
             <h2 className="text-lg font-bold mb-4">
-              Are you sure you want to log out?
+              Are you sure! you want to log out?
             </h2>
             <div className="flex gap-4 justify-center">
               <button
