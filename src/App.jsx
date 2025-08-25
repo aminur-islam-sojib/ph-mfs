@@ -7,8 +7,8 @@ import { Outlet } from 'react-router-dom';
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<LoginForm />} />
-      <Route path="/home" element={<Home />}></Route>
+      {/* <Route path="/" element={<LoginForm />} /> */}
+      <Route path="/" element={<Home />}></Route>
     </Routes>
   );
 }
