@@ -12,7 +12,7 @@ const Home = () => {
   const [active, setActive] = useState('add'); // 'add' | 'send'
 
   return (
-    <div className=" h-screen  w-[400px] mx-auto my-auto shadow-lg">
+    <div className=" h-screen  w-[350px] mx-auto my-auto shadow-lg">
       <Navbar />
       <Cards active={active} onSelect={setActive} />
 
