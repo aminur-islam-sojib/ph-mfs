@@ -1,7 +1,14 @@
 import { useBalance } from '../../../ContexApi/BalanceProvider';
+import { useState } from 'react';
 
 const AddMoney = () => {
+  const [money, setMoney] = useState(0);
   const { setAvailableBalance } = useBalance();
+
+  const addHandleMoney = () => {
+    setAvailableBalance((prev) => prev + parseFloat(money));
+    setMoney(0);
+  };
 
   return (
     <>
@@ -33,6 +40,7 @@ const AddMoney = () => {
           <div className=" mt-4">
             <label className=" font-medium">Amount to Add</label>
             <input
+              onChange={(e) => setMoney(e.target.value)}
               type="number"
               placeholder="Add Amount to withdraw"
               className="input  mt-2 w-full border border-gray-300 rounded-3xl bg-[#F4F5F7] focus-visible:outline-0"
@@ -48,7 +56,7 @@ const AddMoney = () => {
             />
           </div>
           <button
-            onClick={() => setAvailableBalance((prev) => prev + 1000)}
+            onClick={addHandleMoney}
             className="btn btn-primary mt-4 w-full rounded-3xl focus-visible:outline-0"
           >
             Add Money
